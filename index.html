@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="pt-BR" data-lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#071c18">
+  <meta name="description" content="Explore germinação, células, corpo humano 3D, ecologia e evolução em uma experiência visual gratuita de Biologia.">
+  <meta name="author" content="Sidiney Rodrigues">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://sidineyr.github.io/biosfera/">
+  <link rel="alternate" hreflang="pt-BR" href="https://sidineyr.github.io/biosfera/">
+  <link rel="alternate" hreflang="en" href="https://sidineyr.github.io/biosfera/en/">
+  <link rel="alternate" hreflang="es" href="https://sidineyr.github.io/biosfera/es/">
+  <link rel="alternate" hreflang="x-default" href="https://sidineyr.github.io/biosfera/">
+  <meta property="og:title" content="Biosfera Aberta — Uma viagem visual pela vida">
+  <meta property="og:description" content="Entre na vida: observe, explore e descubra Biologia visualmente.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sidineyr.github.io/biosfera/">
+  <meta property="og:locale" content="pt_BR">
+  <title>Biosfera Aberta — Uma viagem visual pela vida</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Biosfera Aberta","description":"Experiência visual gratuita para aprender Biologia.","url":"https://sidineyr.github.io/biosfera/","inLanguage":["pt-BR","en","es"],"learningResourceType":"interactive resource","isAccessibleForFree":true,"author":{"@type":"Person","name":"Sidiney Rodrigues","url":"https://github.com/sidineyr"}}</script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Biosfera Aberta — início"><span class="brand-dot" aria-hidden="true"></span><span>Biosfera <b>Aberta</b></span></a>
+    <nav aria-label="Navegação principal">
+      <a href="#mapa" data-i18n="navExplore">Explorar</a>
+      <a href="#corpo" data-i18n="navBody">Corpo 3D</a>
+      <a href="#fontes" data-i18n="navSources">Fontes</a>
+    </nav>
+    <label class="language"><span class="sr-only">Idioma</span><select id="language" aria-label="Idioma"><option value="pt">PT</option><option value="en">EN</option><option value="es">ES</option></select></label>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="eyebrow">Biologia para olhos curiosos</p>
+        <h1 id="hero-title"><span data-i18n="heroA">A vida não começa</span><br><em data-i18n="heroB">numa definição.</em></h1>
+        <p class="lead" data-i18n="heroLead">Começa quando alguma coisa se move. Observe, toque e atravesse as escalas da vida.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#mapa" data-i18n="start">Começar a viagem</a>
+          <button class="button ghost" id="motion-toggle" type="button" aria-pressed="false"><span aria-hidden="true">◌</span> <span data-i18n="reduceMotion">Reduzir movimento</span></button>
+        </div>
+      </div>
+      <div class="living-orb" aria-hidden="true">
+        <div class="orb-ring ring-a"></div><div class="orb-ring ring-b"></div><div class="orb-core"></div>
+        <span class="particle p1"></span><span class="particle p2"></span><span class="particle p3"></span><span class="particle p4"></span>
+      </div>
+      <p class="scroll-cue" aria-hidden="true">↓</p>
+    </section>
+
+    <section class="section map-section" id="mapa" aria-labelledby="map-title">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="chooseScale">Escolha uma escala</p>
+        <h2 id="map-title" data-i18n="mapTitle">Sete portas para a vida</h2>
+        <p data-i18n="mapLead">Não existe ordem obrigatória. Siga a sua curiosidade.</p>
+      </div>
+      <div class="route-grid" id="route-grid"></div>
+    </section>
+
+    <section class="section birth-section" id="nascimento" aria-labelledby="birth-title">
+      <div class="section-heading split-heading">
+        <div><p class="eyebrow" data-i18n="route1">01 · A vida nasce</p><h2 id="birth-title" data-i18n="birthTitle">Uma semente sabe para onde ir?</h2></div>
+        <p data-i18n="birthLead">Arraste o tempo e acompanhe água, raiz, caule e folhas transformando um feijão.</p>
+      </div>
+      <div class="experiment-card">
+        <div class="plant-stage" id="plant-stage" role="img" aria-label="Animação das etapas de germinação de um feijão">
+          <div class="sun"></div><div class="soil"></div>
+          <div class="seed"><span></span></div><div class="root"></div><div class="stem"><i class="leaf left"></i><i class="leaf right"></i><i class="bud"></i></div>
+        </div>
+        <div class="timeline-control">
+          <label for="growth"><span data-i18n="day">Dia</span> <strong id="day-value">0</strong></label>
+          <input id="growth" type="range" min="0" max="12" value="0" aria-describedby="growth-note">
+          <div class="timeline-labels" aria-hidden="true"><span>0</span><span>3</span><span>6</span><span>9</span><span>12</span></div>
+          <p id="growth-note" class="observation" data-i18n="growth0">A semente absorve água. O volume aumenta e o tegumento começa a romper.</p>
+          <button class="small-button" id="play-growth" type="button" data-i18n="playGrowth">▶ Ver o crescimento</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cell-section" id="celula" aria-labelledby="cell-title">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="route2">02 · A vida por dentro</p>
+        <h2 id="cell-title" data-i18n="cellTitle">Entre numa célula</h2>
+        <p data-i18n="cellLead">Selecione uma estrutura para descobrir o trabalho que acontece além dos nossos olhos.</p>
+      </div>
+      <div class="cell-lab">
+        <div class="cell" role="group" aria-label="Diagrama interativo de uma célula animal">
+          <button class="organelle nucleus active" data-part="nucleus" aria-label="Núcleo"></button>
+          <button class="organelle mito m1" data-part="mitochondria" aria-label="Mitocôndria"></button>
+          <button class="organelle mito m2" data-part="mitochondria" aria-label="Mitocôndria"></button>
+          <button class="organelle golgi" data-part="golgi" aria-label="Complexo golgiense"></button>
+          <button class="organelle ribosome r1" data-part="ribosome" aria-label="Ribossomo"></button>
+          <button class="organelle ribosome r2" data-part="ribosome" aria-label="Ribossomo"></button>
+          <span class="cell-glow"></span>
+        </div>
+        <aside class="fact-panel" aria-live="polite">
+          <p class="fact-number" data-i18n="closer">Olhe mais perto</p>
+          <h3 id="fact-title">Núcleo</h3>
+          <p id="fact-text">Abriga a maior parte do DNA e participa do controle das atividades celulares.</p>
+          <p class="question" data-i18n="cellQuestion">O que aconteceria se a informação não pudesse sair daqui?</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section body-section" id="corpo" aria-labelledby="body-title">
+      <div class="section-heading split-heading">
+        <div><p class="eyebrow" data-i18n="route3">03 · Corpo humano 3D</p><h2 id="body-title" data-i18n="bodyTitle">Viaje por dentro de nós</h2></div>
+        <p data-i18n="bodyLead">Gire, aproxime e explore um modelo anatômico aberto. Uma representação educacional, não um diagnóstico.</p>
+      </div>
+      <div class="body-viewer">
+        <iframe title="Modelo tridimensional interativo do corpo humano" src="https://sketchfab.com/models/6cc9217317804dc89622b7b0e499bc89/embed?autostart=0&ui_theme=dark&ui_infos=0&ui_watermark=0" allow="autoplay; fullscreen; xr-spatial-tracking" loading="lazy" allowfullscreen></iframe>
+        <div class="body-side">
+          <span class="live-pill" data-i18n="interactive">Interativo</span>
+          <h3 data-i18n="journeys">Escolha uma viagem</h3>
+          <div class="journey-list">
+            <button type="button" data-journey="oxygen"><span>O₂</span><b data-i18n="oxygen">A viagem do oxigênio</b></button>
+            <button type="button" data-journey="food"><span>≈</span><b data-i18n="food">O caminho do alimento</b></button>
+            <button type="button" data-journey="signal"><span>ϟ</span><b data-i18n="signal">Uma mensagem nervosa</b></button>
+          </div>
+          <div class="journey-note" id="journey-note" aria-live="polite"><strong data-i18n="lungs">Pulmões → sangue → tecidos</strong><p data-i18n="oxygenNote">O oxigênio atravessa superfícies muito finas nos alvéolos, entra no sangue e chega às células.</p></div>
+          <p class="attribution"><a href="https://sketchfab.com/3d-models/reworked-full-human-body-6cc9217317804dc89622b7b0e499bc89" target="_blank" rel="noopener">Modelo: Reworked Full Human Body</a>, baseado no projeto Z-Anatomy, CC BY-SA 4.0.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section web-section" id="teia" aria-labelledby="web-title">
+      <div class="section-heading centered">
+        <p class="eyebrow" data-i18n="route5">05 · Teia da vida</p>
+        <h2 id="web-title" data-i18n="webTitle">Nada vive sozinho</h2>
+        <p data-i18n="webLead">Toque num ser vivo e veja como a energia conecta esta pequena teia.</p>
+      </div>
+      <div class="food-web" id="food-web">
+        <svg viewBox="0 0 800 430" role="img" aria-labelledby="web-svg-title web-svg-desc">
+          <title id="web-svg-title">Teia alimentar interativa</title><desc id="web-svg-desc">Sol, planta, gafanhoto, sapo, serpente e fungos conectados pelo fluxo de energia.</desc>
+          <g class="links"><path d="M400 60 L220 180"/><path d="M220 180 L390 250"/><path d="M390 250 L585 180"/><path d="M585 180 L610 340"/><path d="M390 250 L610 340"/><path d="M220 180 L190 350"/></g>
+          <g class="node" data-node="sun" tabindex="0"><circle cx="400" cy="60" r="42"/><text x="400" y="67">☀</text></g>
+          <g class="node" data-node="plant" tabindex="0"><circle cx="220" cy="180" r="52"/><text x="220" y="192">♧</text></g>
+          <g class="node" data-node="insect" tabindex="0"><circle cx="390" cy="250" r="44"/><text x="390" y="261">⌁</text></g>
+          <g class="node" data-node="frog" tabindex="0"><circle cx="585" cy="180" r="48"/><text x="585" y="191">●</text></g>
+          <g class="node" data-node="snake" tabindex="0"><circle cx="610" cy="340" r="48"/><text x="610" y="351">∿</text></g>
+          <g class="node" data-node="fungi" tabindex="0"><circle cx="190" cy="350" r="45"/><text x="190" y="361">♠</text></g>
+        </svg>
+        <p id="web-fact" aria-live="polite" data-i18n="webFact">A luz do Sol inicia o fluxo de energia desta teia.</p>
+      </div>
+    </section>
+
+    <section class="section video-section" id="movimento" aria-labelledby="video-title">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="route4">04 · Vida em movimento</p>
+        <h2 id="video-title" data-i18n="videoTitle">O tempo revela o invisível</h2>
+        <p data-i18n="videoLead">Seleção educativa externa. Os vídeos só carregam quando você decide assistir.</p>
+      </div>
+      <div class="video-grid">
+        <article class="video-card"><div class="video-cover seed-cover"><span>12 <small data-i18n="days">dias</small></span></div><div><p class="tag" data-i18n="germination">Germinação</p><h3 data-i18n="beanTitle">Do feijão às primeiras folhas</h3><p data-i18n="beanText">Observe a sequência e identifique qual estrutura aparece primeiro.</p><a href="https://www.youtube.com/results?search_query=bean+germination+time+lapse+education" target="_blank" rel="noopener" data-i18n="watchSelection">Ver seleção educativa ↗</a></div></article>
+        <article class="video-card"><div class="video-cover flower-cover"><span>✿</span></div><div><p class="tag" data-i18n="flowering">Florescimento</p><h3 data-i18n="flowerTitle">A flor abre em outro relógio</h3><p data-i18n="flowerText">Time-lapses tornam visíveis movimentos lentos de crescimento e resposta à luz.</p><a href="https://commons.wikimedia.org/wiki/Category:Videos_of_flowers_opening" target="_blank" rel="noopener" data-i18n="openArchive">Abrir arquivo livre ↗</a></div></article>
+        <article class="video-card"><div class="video-cover evolution-cover"><span>4,5 <small>Ga</small></span></div><div><p class="tag" data-i18n="evolution">Evolução</p><h3 data-i18n="timelineTitle">A linha do tempo da vida</h3><p data-i18n="timelineText">Uma história profunda demais para caber na escala de uma vida humana.</p><a href="https://www.biointeractive.org/classroom-resources/earthviewer" target="_blank" rel="noopener" data-i18n="exploreHhmi">Explorar no HHMI ↗</a></div></article>
+      </div>
+    </section>
+
+    <section class="section sources-section" id="fontes" aria-labelledby="sources-title">
+      <div class="section-heading"><p class="eyebrow" data-i18n="openScience">Ciência aberta</p><h2 id="sources-title" data-i18n="sourcesTitle">Veja de onde vem o conhecimento</h2><p data-i18n="sourcesLead">Modelos simplificam a realidade. Por isso, cada experiência aponta para fontes que você pode conferir.</p></div>
+      <div class="source-list">
+        <a href="https://www.biointeractive.org/" target="_blank" rel="noopener"><span>01</span><div><b>HHMI BioInteractive</b><small data-i18n="hhmiDesc">Recursos de Biologia revisados para educação.</small></div><i>↗</i></a>
+        <a href="https://3d.nih.gov/" target="_blank" rel="noopener"><span>02</span><div><b>NIH 3D</b><small data-i18n="nihDesc">Modelos biomédicos e científicos tridimensionais.</small></div><i>↗</i></a>
+        <a href="https://commons.wikimedia.org/wiki/Category:Biology" target="_blank" rel="noopener"><span>03</span><div><b>Wikimedia Commons</b><small data-i18n="commonsDesc">Imagens, animações e vídeos com licenças identificadas.</small></div><i>↗</i></a>
+        <a href="SOURCES.md"><span>04</span><div><b data-i18n="projectSources">Fontes do projeto</b><small data-i18n="projectSourcesDesc">Curadoria, licenças e datas de verificação.</small></div><i>→</i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main"><div><a class="brand" href="#inicio"><span class="brand-dot"></span><span>Biosfera <b>Aberta</b></span></a><p data-i18n="footerTag">Uma viagem visual pela vida.</p></div><div><p data-i18n="idealized">Idealizado por <a href="https://github.com/sidineyr" target="_blank" rel="noopener">Sidiney Rodrigues</a>.</p><p><a href="https://sidineyr.github.io/" data-i18n="siblings">Continue aprendendo: conheça os outros projetos gratuitos.</a></p></div></div>
+    <p class="care-note" data-i18n-html="care">Este projeto nasceu do desejo de ensinar e cuidar. Se ele tocou você, <a href="https://pequenoprincipe.org.br/doadores/apoie-o-pequeno-principe/" target="_blank" rel="noopener">considere doar diretamente ao Hospital Pequeno Príncipe</a>. Iniciativa voluntária, independente e sem intermediação financeira.</p>
+    <p class="legal">Conteúdo educacional · CC BY 4.0 · Código MIT · <span data-i18n="medical">Não substitui orientação médica.</span></p>
+  </footer>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>

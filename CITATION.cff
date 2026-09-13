@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Se você usar este recurso, cite-o desta forma."
+title: "Biosfera Aberta: uma viagem visual pela vida"
+type: software
+authors:
+  - family-names: "Rodrigues"
+    given-names: "Sidiney"
+url: "https://sidineyr.github.io/biosfera/"
+repository-code: "https://github.com/sidineyr/biosfera"
+license: MIT
+version: 1.0.0
+date-released: 2026-09-13
+keywords:
+  - biologia
+  - educação aberta
+  - anatomia 3D
+  - aprendizagem visual
+  - tecnologia educacional
