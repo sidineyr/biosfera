@@ -39,3 +39,8 @@ Idealizado por **Sidiney Rodrigues**, com desenvolvimento assistido por OpenAI C
 ## Nota solidária
 
 O projeto é gratuito e independente. Visitantes são convidados a doar diretamente ao [Hospital Pequeno Príncipe](https://pequenoprincipe.org.br/doadores/apoie-o-pequeno-principe/), sem qualquer intermediação financeira pelo projeto.
+
+
+## Contador de acessos (16/10/2026)
+
+A página inicial exibe um contador público Hits, chave `sidineyr.github.io/biosfera`. Conta carregamentos do indicador desde a instalação, não pessoas únicas. O serviço externo recebe dados técnicos da conexão; nenhuma resposta de atividade é enviada. O portfólio consulta o total pela API de estatísticas, sem carregar o SVG e sem acrescentar acessos. Histórico anterior à instalação não foi estimado.
